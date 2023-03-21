@@ -12,8 +12,7 @@ public class UserDaoImpl implements UserDao {
     @PersistenceContext
     private EntityManager entityManager;
 
-    private UserDaoImpl() {
-    }
+    private UserDaoImpl() {}
     @Override
     public User getUser(long id) {      // Long or long - What's the difference in this case?
         return entityManager.find(User.class, id);
