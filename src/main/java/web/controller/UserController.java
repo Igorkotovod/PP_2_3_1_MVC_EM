@@ -7,7 +7,6 @@ import web.model.User;
 import web.service.UserService;
 
 @Controller
-@RequestMapping(value = "/users")
 public class UserController {
 
     private final UserService userService;
@@ -15,7 +14,12 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping()
+    @GetMapping("/")
+    public String o() {
+        return "redirect:/users";
+    }
+
+    @GetMapping("/users")
     public String getAllUsers(Model model) {
         model.addAttribute("listUser", userService.getAllUsers());
         return "users";
