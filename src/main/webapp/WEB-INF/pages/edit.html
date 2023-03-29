@@ -24,7 +24,7 @@
   </thead>
 
   <tbody>
-  <form th:method="PATCH" th:action="@{/users/{id}(id=${user.getId()})}" th:object="${user}">
+  <form th:method="PATCH" th:action="@{{id}(id=${user.getId()})}" th:object="${user}">
     <td th:text="*{id}"/>
     <td>
       <input type="text" th:field="*{name}" id="name"/>
@@ -43,7 +43,7 @@
     </td>
   </form>
 
-  <form th:method="DELETE" th:action="@{/users/{id}(id=${user.getId()})}">
+  <form th:method="DELETE" th:action="@{{id}(id=${user.getId()})}">
     <td>
       <input type="submit" value="удалить"/>
     </td>
