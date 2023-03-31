@@ -15,7 +15,7 @@ public class UserController {
     }
 
     @GetMapping("/")
-    public String o() {
+    public String mainPage() {
         return "redirect:/users";
     }
 

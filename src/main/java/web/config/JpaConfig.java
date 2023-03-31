@@ -21,9 +21,7 @@ public class JpaConfig {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:3306/sampleDB?" +
-                "useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT&allowPublicKeyRetrieval=true&" +
-                "useSSL=false&zeroDateTimeBehavior=convertToNull&createDatabaseIfNotExist=true");
+        dataSource.setUrl("jdbc:mysql://localhost:3306/sampleDB");
         dataSource.setUsername("root");
         dataSource.setPassword("11qq11qq");
         return dataSource;
